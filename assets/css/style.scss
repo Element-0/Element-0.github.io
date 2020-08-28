@@ -1,0 +1,12 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+ul.navbar li {
+display: inline;
+border-right: solid 2px red;
+} 
+ul.navbar li:last-child {
+border-right: none;
+} 
