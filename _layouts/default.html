@@ -14,7 +14,6 @@
   </head>
   <body>
     <div class="wrapper">
-<ul class="navbar"> {% for item in site.data.menu.menu %} <li><a href="{{ item.url }}">{{ item.title }}</a></li> {% endfor %} </ul>
       <header>
         <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
@@ -29,7 +28,7 @@
           <p class="header">This project is maintained by <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
       </header>
-
+<ul class="navbar"> {% for item in site.data.menu.menu %} <li><a href="{{ item.url }}">{{ item.title }}</a></li> {% endfor %} </ul>
       <section>
         {{ content }}
       </section>
