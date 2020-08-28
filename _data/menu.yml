@@ -1,4 +1,5 @@
 menu:
 
 - Title: Home
-  url: readme.html
+  url: index.html
+
