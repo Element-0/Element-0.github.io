@@ -6,4 +6,5 @@ To get started, you should take a look at our [Wiki.](https://github.com/Element
 
 If you're looking for mods, those can also be found on the [Forums.](https://elementzero.flarum.cloud/)
 
+****PLEASE NOTE**** that this site is a WIP. More will be added to it in time.
 
