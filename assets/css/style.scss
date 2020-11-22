@@ -4,7 +4,9 @@
 @import "{{ site.theme }}";
 
 div.navbar {
-border-top: solid 3px #000000;
+position: fixed;
+ top: 0;
+ left: 0;
 padding-bottom: 0;
 margin-bottom: 0;
 padding: 5px;
