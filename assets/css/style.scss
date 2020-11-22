@@ -11,3 +11,10 @@ padding-bottom: 0;
 margin-bottom: 0;
 padding: 5px;
 }
+.navlink {
+border-right: solid 2px black;
+}
+.navlink:last-child {
+border-right: none;
+}
+
