@@ -43,9 +43,7 @@ converter = new showdown.Converter
 var sidebarstyle = "position: absolute;right: 0;display: inline;height: content-height;width: 30%;border: solid 2px black;border-radius: 20px; ";
 var sidebar = document.getElementById("docsidebar");
 sidebar.style = sidebarstyle;
-$.get("sidebar.md", function(data){
-sidebarmd = data;
-});
+$.get("sidebar.md", function(data){sidebarmd = data});
 var sidebarhtml = converter.makeHtml(sidebarmd);
 sidebar.innerHTML = sidebarhtml;
 }}
