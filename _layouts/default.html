@@ -47,7 +47,7 @@ $.get("sidebar.md", function(data){
 sidebarmd = data;
 });
 var sidebarhtml = converter.makeHtml(sidebarmd);
-sidebar.innerHtml = sidebarhtml;
+sidebar.innerHTML = sidebarhtml;
 }
 </script>
   </body>
