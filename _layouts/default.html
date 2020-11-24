@@ -37,11 +37,14 @@
     </main>
 	<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
 	<script>
+var sidebarmd
 var sidebarstyle = "position: absolute;right: 0;display: inline;height: 100%;width: 30%;border: solid 2px black;border-radius: 20px; ";
 if (window.location.href.indexOf("/ElementZero.wiki") > -1) {
 var sidebar = document.getElementById("docsidebar");
 sidebar.style = sidebarstyle;
-$.get("sidebar.md", function(data){var sidebarmd = data});
+$.get("sidebar.md", function(data){
+sidebarmd = data;
+});
 var sidebarhtml = showdown.Converter.makeHtml(sidebarmd);
 sidebar.innerHtml = sidebarhtml;
 }
