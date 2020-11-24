@@ -38,10 +38,10 @@
 	<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
 <script>
 function makesidebar() {
+if (window.location.href.indexOf("/ElementZero.wiki") > -1) {
 var sidebarmd
 converter = new showdown.Converter
 var sidebarstyle = "position: absolute;right: 0;display: inline;height: content-height;width: 30%;border: solid 2px black;border-radius: 20px; ";
-if (window.location.href.indexOf("/ElementZero.wiki") > -1) {
 var sidebar = document.getElementById("docsidebar");
 sidebar.style = sidebarstyle;
 $.get("sidebar.md", function(data){
