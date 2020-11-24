@@ -42,13 +42,11 @@ converter = new showdown.Converter
 var sidebarstyle = "position: absolute;right: 0;display: inline;height: content-height;width: 30%;border: solid 2px black;border-radius: 20px; ";
 var sidebar = document.getElementById("docsidebar");
 sidebar.style = sidebarstyle;
-fetch("sidebar.md").then(function(response) {
-  return response.json();
-}).then(function(data) {
-sidebarhtml = data;
-}).catch(function() {
-  console.log("Booo");
-});
+var sidebarhtml = async function fetchAsync ("sidebar.md") {
+  let response = await fetch("sidebar.md");
+  let data = await response.json();
+  return data;
+}
 var sidebarhtml = converter.makeHtml(sidebarmd);
 sidebar.innerHTML = sidebarhtml;
 }
