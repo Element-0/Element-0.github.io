@@ -6,7 +6,15 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+</script>
   </head>
   <body>
 
@@ -42,11 +50,7 @@ converter = new showdown.Converter
 var sidebarstyle = "position: absolute;right: 0;display: inline;height: content-height;width: 30%;border: solid 2px black;border-radius: 20px; ";
 var sidebar = document.getElementById("docsidebar");
 sidebar.style = sidebarstyle;
-var sidebarhtml = function httpGet("sidebar.md") {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "sidebar.md", false );
-    xmlHttp.send( null );
-    return xmlHttp.responseText; }
+var sidebarmd = httpGet("sidebar.md");
 var sidebarhtml = converter.makeHtml(sidebarmd);
 sidebar.innerHTML = sidebarhtml;
 }
