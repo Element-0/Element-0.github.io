@@ -2,15 +2,29 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTVSG8EL1P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTVSG8EL1P');
+// Documentation Sidebar
+var sidebarstyle = "
+position: absolute;
+right: 0;
+display: inline;
+height: 100%;
+width: 30%;
+border: solid 2px black;
+border-radius: 20px; ";
+if (window.location.href.indexOf("/Element-0.wiki") > -1) {
+var sidebar = document.getElementById("docsidebar");
+sidebar.innerHTML = "<iframe height='100%' width='100%' src='Sidebar.html'/>";
+sidebar.style = sidebarstyle;
+}
+</script>
     <meta charset="UTF-8">
 
 {% seo %}
@@ -35,6 +49,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+	<div id="docsidebar"></div>
       {{ content }}
 
       <footer class="site-footer">
